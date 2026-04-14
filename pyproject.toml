@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "otomotoskrap"
+version = "0.1.0"
+description = "Otomoto.pl car listing scraper for price tracking"
+requires-python = ">=3.11"
+dependencies = [
+    "httpx>=0.27",
+    "beautifulsoup4>=4.12",
+    "lxml>=5.0",
+    "pydantic>=2.0",
+    "click>=8.1",
+    "pyyaml>=6.0",
+    "structlog>=24.0",
+]
+
+[project.scripts]
+otomotoskrap = "otomotoskrap.cli:cli"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-httpx>=0.30",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/otomotoskrap"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

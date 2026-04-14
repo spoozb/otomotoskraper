@@ -1,0 +1,14 @@
+queries:
+  - name: bmw_3_series
+    url: "https://www.otomoto.pl/osobowe/bmw/seria-3"
+    max_pages: 50
+
+  - name: electric_cars
+    url: "https://www.otomoto.pl/osobowe?search%5Bfilter_enum_fuel_type%5D%5B0%5D=electric"
+    max_pages: 100
+
+settings:
+  delay_range: [2, 5]
+  max_retries: 3
+  output_dir: "./data"
+  proxy: null
