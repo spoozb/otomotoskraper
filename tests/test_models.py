@@ -61,7 +61,7 @@ class TestListing:
         assert "listing_id" in headers
         assert "price" in headers
         assert "scraped_at" in headers
-        assert len(headers) == 20
+        assert len(headers) == 21
 
     def test_listing_to_csv_row(self):
         dt = datetime(2026, 4, 14, 12, 0, tzinfo=timezone.utc)
@@ -86,7 +86,7 @@ class TestListing:
         row = listing.to_csv_row()
         assert row[0] == "1"
         assert row[4] == "3"
-        assert len(row) == 20
+        assert len(row) == 21
 
 
 class TestConfig:

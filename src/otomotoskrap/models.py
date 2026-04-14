@@ -25,6 +25,7 @@ _LISTING_CSV_FIELDS: list[str] = [
     "seller_type",
     "is_new",
     "scraped_at",
+    "query_name",
 ]
 
 
